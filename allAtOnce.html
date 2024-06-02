@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>All At Once</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesAllAtOnce.css">
+    <script src="script.js"></script>
+    <script src ="nameGenerator.js"></script>
+    <script src ="seasonGenerator.js"></script>
+    <script src ="clanGenerator.js"></script>
+  </head>
+  <body>
+    <nav >
+      <a href="/">Home</a>
+      <a href="/Names.html">Name</a>
+      <a href="/season.html">Season</a>
+      <a href="/clan.html">Clan</a>
+      <a href="/allAtOnce.html" aria-current="page">All</a>
+      <a href="/randomCat.html">Cat</a>
+    </nav>
+    <main class="generatorContainer">
+      <h1>All At Once</h1>
+      <div class ="ContainerAll">
+        <div class ="name generator flexItem">
+          <h2>Name Generator</h2>
+          <p id="nameResult"></p>
+        </div>
+        <div class ="season generator flexItem">
+          <h2>Season Generator</h2>
+          <p id="seasonResult"></p>
+        </div>
+        <div class = "clan generator flexItem">
+          <h2>Clan Generator</h2>
+          <p id="clanResult"></p>
+        </div>
+        <div class = "generateBtn flexItem">
+          <button  id="allBtn" class="btn" onclick="allGen()">Generate</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

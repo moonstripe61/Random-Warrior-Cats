@@ -1,0 +1,35 @@
+@import url("variablen.css");
+
+.ContainerAll{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60vh;
+}
+
+.flexItem{
+  flex: 40%;
+  margin: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); 
+}
+
+.flexItem h2{
+  border-top: 1px solid grey;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+}
+
+.generator{
+  border: 1px solid grey;
+  display:flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.flexItem .btn{
+  height: 100%;
+}

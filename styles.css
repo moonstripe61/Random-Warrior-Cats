@@ -1,0 +1,174 @@
+@import url('variablen.css');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px;
+  font-family: system-ui, sans-serif;
+  color: var(--primaerText);
+  background-color: var(--mainBackground);
+}
+
+.homeMenu {
+  display: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: var(--bgNav);
+  color: var(--primaerText);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 10px auto;
+  width: 90vw;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+nav a {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 5px;
+  text-decoration: none;
+}
+
+nav a[aria-current='page'] {
+  color: var(--blue);
+}
+
+main {
+  padding: 10px 0;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 10px 0;
+  border-bottom: 1px solid grey;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.generatorContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.flexItem p {
+  min-height: 90px;
+  margin: 0;
+  text-align: center;
+  /* margin: 20px; */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.flexItem .Results {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexItem .Results p{
+  min-height: 40px;
+}
+
+.resultBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  padding: 5px;
+  height: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  width: 100%;
+  background-color: var(--lila);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 20px 10px;
+  transition: all 0.1s ease;
+}
+
+.Overview {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 80vh;
+}
+
+.Overview .flexItem {
+  cursor: pointer;
+  flex: 40%;
+  margin: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+  transition: all 0.5s ease;
+}
+
+.Overview a {
+  color: white;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.Overview .name:hover {
+  background-color: var(--blue);
+}
+.Overview .season:hover {
+  background-color: var(--lila);
+}
+.Overview .clan:hover {
+  background-color: var(--pink);
+}
+.Overview .all:hover {
+  background-color: var(--mint);
+}
+.Overview .all:hover a {
+  color: black;
+}
+.circle {
+  width: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+  border: 1px solid black;
+  border-radius: 50%; /* Ensures circle shape */
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+  margin: 5px; /* Add spacing between circles */
+}
+
+#farbenContainer{
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+}

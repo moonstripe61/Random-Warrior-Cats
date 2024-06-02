@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>All At Once</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesAllAtOnce.css">
+    <script src ="script.js"></script>
+    <script src ="randomCat.js"></script>
+  </head>
+  <body>
+    <nav >
+      <a href="/">Home</a>
+      <a href="/Names.html">Name</a>
+      <a href="/season.html">Season</a>
+      <a href="/clan.html">Clan</a>
+      <a href="/allAtOnce.html">All</a>
+      <a href="/randomCat.html" aria-current="page">Cat</a>
+    </nav>
+    <main class="generatorContainer">
+      <h1>Random Cat</h1>
+      <div class ="ContainerAll">
+        <div class ="hairLength generator flexItem">
+          <div class="flex">
+            <h2>hair length</h2>
+            <p id="lengthResult"></p>
+          </div>
+        </div>
+        <!-- <div class ="pattern generator flexItem">
+          <h2>Pattern </h2>
+          <p id="patternResult"></p>
+        </div> -->
+        <div class = "colors generator flexItem">
+          <div class="flex">
+            <h2>Color </h2>
+            <div class="Results">
+              <div id="color1">
+                <p id="colorResult1"></p>
+              </div>
+              <div id="color2">
+                <p id="colorResult2"></p>
+              </div>
+              <div id="color3">
+                <p id="colorResult3"></p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class = "eyeColor generator flexItem">
+          <div class="flex">
+            <h2>Eye Color </h2>
+            <div class="Results">
+              <div id="eyecolor1">
+                <p id="eyesResult1"></p>
+              </div>
+              <div id="eyecolor2">
+              <p id="eyesResult2"></p>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class = "generateBtn flexItem">
+          <button  id="allBtn" class="btn" onclick="randomCat()">Generate</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
