@@ -97,54 +97,68 @@ const augenfarben = {
     ]
 };
 
+// Funktion, um die Helligkeit einer Farbe zu berechnen
+function getContrastYIQ(hexcolor) {
+  hexcolor = hexcolor.replace("#", "");
+  let r = parseInt(hexcolor.substr(0, 2), 16);
+  let g = parseInt(hexcolor.substr(2, 2), 16);
+  let b = parseInt(hexcolor.substr(4, 2), 16);
+  let yiq = (r * 299 + g * 587 + b * 114) / 1000;
+  return yiq >= 128 ? 'black' : 'white'; // Helle Farben bekommen schwarze Schrift, dunkle Farben weiße
+}
+
 window.onload = function () {
-    setTimeout(function () {
-        const farbenContainer = document.getElementById('farbenContainer');
+  setTimeout(function () {
+      const farbenContainer = document.getElementById('farbenContainer');
 
-        // Fellfarben anzeigen
-        for (const [kategorie, farbenArray] of Object.entries(farben)) {
-            const section = document.createElement('div');
-            section.className = 'section';
-            const title = document.createElement('h3');
-            title.innerText = `Fellfarben: ${kategorie}`;
-            section.appendChild(title);
+      // Fellfarben anzeigen
+      for (const [kategorie, farbenArray] of Object.entries(farben)) {
+          const section = document.createElement('div');
+          section.className = 'section';
+          const title = document.createElement('h3');
+          title.innerText = `Fellfarben: ${kategorie}`;
+          section.appendChild(title);
 
-            const circlesContainer = document.createElement('div');
-            circlesContainer.className = 'circles-container';
+          const circlesContainer = document.createElement('div');
+          circlesContainer.className = 'circles-container';
 
-            farbenArray.forEach((hex, index) => {
-                const kreis = document.createElement('div');
-                kreis.className = 'circle';
-                kreis.style.backgroundColor = hex;
-                kreis.innerText = index + 1;
-                circlesContainer.appendChild(kreis);
-            });
+          farbenArray.forEach((hex) => {
+              const kreis = document.createElement('div');
+              kreis.className = 'circle';
+              kreis.style.backgroundColor = hex;
+              kreis.style.color = getContrastYIQ(hex); // Setze die Textfarbe basierend auf der Helligkeit
+              kreis.innerText = hex;
+              circlesContainer.appendChild(kreis);
+          });
 
-            section.appendChild(circlesContainer);
-            farbenContainer.appendChild(section);
-        }
+          section.appendChild(circlesContainer);
+          farbenContainer.appendChild(section);
+      }
 
-        // Augenfarben anzeigen
-        for (const [kategorie, augenArray] of Object.entries(augenfarben)) {
-            const section = document.createElement('div');
-            section.className = 'section';
-            const title = document.createElement('h3');
-            title.innerText = `Augenfarben: ${kategorie}`;
-            section.appendChild(title);
+      // Augenfarben anzeigen
+      for (const [kategorie, augenArray] of Object.entries(augenfarben)) {
+          const section = document.createElement('div');
+          section.className = 'section';
+          const title = document.createElement('h3');
+          title.innerText = `Augenfarben: ${kategorie}`;
+          section.appendChild(title);
 
-            const circlesContainer = document.createElement('div');
-            circlesContainer.className = 'circles-container';
+          const circlesContainer = document.createElement('div');
+          circlesContainer.className = 'circles-container';
 
-            augenArray.forEach((hex, index) => {
-                const kreis = document.createElement('div');
-                kreis.className = 'circle';
-                kreis.style.backgroundColor = hex;
-                kreis.innerText = index + 1;
-                circlesContainer.appendChild(kreis);
-            });
+          augenArray.forEach((hex) => {
+              const kreis = document.createElement('div');
+              kreis.className = 'circle';
+              kreis.style.backgroundColor = hex;
+              kreis.style.color = getContrastYIQ(hex); // Setze die Textfarbe basierend auf der Helligkeit
+              kreis.innerText = hex;
+              circlesContainer.appendChild(kreis);
+          });
 
-            section.appendChild(circlesContainer);
-            farbenContainer.appendChild(section);
-        }
-    }, 500); // Wartezeit von 500ms
+          section.appendChild(circlesContainer);
+          farbenContainer.appendChild(section);
+      }
+  }, 500); // Wartezeit von 500ms
 };
+
+
